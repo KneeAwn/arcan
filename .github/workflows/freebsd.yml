@@ -12,7 +12,7 @@ jobs:
       with:
         prepare: |
           pkg install -y cmake ninja pkgconf # build
-          pkg install -y evdev-proto freetype2 luajit openal-soft sqlite3 libatomic # common
+          pkg install -y evdev-proto freetype2 luajit openal-soft sqlite3 # common
           pkg install -y -x '^mesa($|-libs)' # egl-dri
           pkg install -y wayland-protocols wayland xcb-util-wm libxkbcommon # wayland
           pkg install -y sdl2 # sdl (hybrid)
