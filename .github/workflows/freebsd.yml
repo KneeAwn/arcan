@@ -8,11 +8,11 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Test in FreeBSD VM
-      uses: vmactions/freebsd-vm@v0.1.7 # on update bump workflow name
+      uses: vmactions/freebsd-vm@v0.2.0 # on update bump workflow name
       with:
         prepare: |
           pkg install -y cmake ninja pkgconf # build
-          pkg install -y evdev-proto freetype2 luajit openal-soft sqlite3 # common
+          pkg install -y evdev-proto freetype2 luajit openal-soft sqlite3 libatomic # common
           pkg install -y -x '^mesa($|-libs)' # egl-dri
           pkg install -y wayland-protocols wayland xcb-util-wm libxkbcommon # wayland
           pkg install -y sdl2 # sdl (hybrid)
