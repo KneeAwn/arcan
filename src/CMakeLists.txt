@@ -48,9 +48,8 @@ find_package(Threads REQUIRED)
 find_package(Math REQUIRED)
 find_package(RT REQUIRED)
 find_package(DL REQUIRED)
-find_package(Atomic REQUIRED)
 
-set(STDLIB Threads::Threads Math::Math RT::RT DL::DL Atomic::Atomic)
+set(STDLIB Threads::Threads Math::Math RT::RT DL::DL)
 
 if (CMAKE_COLOR_MAKEFILE)
 	include(CMakeColor)
